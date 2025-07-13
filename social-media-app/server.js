@@ -1,7 +1,12 @@
 const express = require("express");
 const mongoose = require("mongoose");
 const dotenv = require("dotenv");
-const cors = require("cors");
+const cors = require('cors');
+
+app.use(cors({
+  origin: 'https://autism-platform-frontend.vercel.app',
+  credentials: true,
+}));
 const path = require("path");
 
 const app = express();
